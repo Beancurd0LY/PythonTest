@@ -42,6 +42,14 @@ num.reverse()
 print num
 
 
+#字符串格式化 %s%d   
+a = 1 
+b = 1
+pageNo = "pn=%d"%(a)
+pageSize = "rn=%d"%(b)
+print pageNo
+
+
 
 
 
@@ -61,6 +69,9 @@ if os.system(war_command) == 0:
     print 'successful to back',targetNew
 else:
     print 'backup failed!'
+    
+    
+
 
 
 

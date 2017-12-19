@@ -17,7 +17,9 @@ uipath = unicode(inpath,"utf8")
 os.chdir(uipath)#变更当前目录
 print os.getcwd()
 
-url = "https://image.baidu.com/search/acjson?tn=resultjson_com&ipn=rj&ct=201326592&is=&fp=result&queryWord+=&cl=2&lm=-1&ie=utf-8&oe=utf-8&adpicid=&st=-1&word=%E5%91%A8%E6%9D%B0%E4%BC%A6&z=&ic=0&s=&se=&tab=&width=&height=&face=0&istype=2&qc=&nc=1&fr=&step_word=%E5%91%A8%E6%9D%B0%E4%BC%A6&pn=90&rn=30&gsm=5a&1513316320707="
+url = '''https://image.baidu.com/search/acjson?tn=resultjson_com&ipn=rj&ct=201326592&is=&fp=result&queryWord+=
+    &cl=2&lm=-1&ie=utf-8&oe=utf-8&adpicid=&st=-1&word=%E4%BB%99%E5%89%91&z=&ic=0&s=&se=&tab=&width=&height=
+    &face=0&istype=2&qc=&nc=1&fr=&step_word=%E4%BB%99%E5%89%91&pn=240&rn=30'''
 url2 = "http://reeoo.com/"
 #res = urllib2.urlopen(url)
 #content = res.read().decode("utf-8")
@@ -31,6 +33,7 @@ url2 = "http://reeoo.com/"
 r = requests.get(url)
 r.encoding = "ISO-8859-1"
 #r.text
+print r.text
 print r.json()
 #fobj = open("a.txt","w")
 #fobj.write(r.text.read())

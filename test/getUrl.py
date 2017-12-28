@@ -19,7 +19,8 @@ print os.getcwd()
 
 url = '''https://image.baidu.com/search/acjson?tn=resultjson_com&ipn=rj&ct=201326592&is=&fp=result&queryWord+=
     &cl=2&lm=-1&ie=utf-8&oe=utf-8&adpicid=&st=-1&word=%E4%BB%99%E5%89%91&z=&ic=0&s=&se=&tab=&width=&height=
-    &face=0&istype=2&qc=&nc=1&fr=&step_word=%E4%BB%99%E5%89%91&pn=240&rn=30'''
+    &face=0&istype=2&qc=&nc=1&fr=&step_word=%E4%BB%99%E5%89%91&pn=390&rn=30'''
+       
 url2 = "http://reeoo.com/"
 #res = urllib2.urlopen(url)
 #content = res.read().decode("utf-8")
@@ -34,11 +35,13 @@ r = requests.get(url)
 r.encoding = "ISO-8859-1"
 #r.text
 print r.text
-print r.json()
+#print r.json()
 #fobj = open("a.txt","w")
 #fobj.write(r.text.read())
 #fobj.close()
 a = r.json()
+#a = r.text
+print type(a)
 print a[ u'data' ]
 b = a[ u'data' ]
 listUrl = []

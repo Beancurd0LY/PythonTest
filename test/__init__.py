@@ -53,23 +53,7 @@ print pageNo
 
 
 
-source_dir= r'E:\PycharmProjects'
-targer_dir = r'E:\Backup'
-target = targer_dir + time.strftime('%y%m%d')
-now = time.strftime('%H%M%S')
-targetNew = target + os.sep + now + '.rar'
-if not os.path.exists(targer_dir):
-    os.mkdir(targer_dir)
-if not os.path.exists(target):
-       os.mkdir(target)
-print 'successful create file'
-war_command = r'"C:\Program Files\WinRAR\WinRAR.exe" A -ibck %s %s -r' % (targetNew,''.join(source_dir))
 
-if os.system(war_command) == 0:
-    print 'successful to back',targetNew
-else:
-    print 'backup failed!'
-    
     
 
 

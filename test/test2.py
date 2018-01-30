@@ -48,5 +48,3 @@ print ignore_list
 print('\n'.join(c for c in lst if os.path.isfile(c) and c.endswith('.py')))
 print dir(ignore_list[1]) 
 
-
-

@@ -13,10 +13,10 @@ class MATRIX_ENV_CONF(object):
             'IPADDR = 10.8.1.159\n',
             'IPADDR = 10.8.1.159\n',
             'HOSTNAME = normandy-biz.off.zhidaovip.com\n',
-            'MATRIX_CACHE_DIR = "/data0/www/cache/normandy-biz.off.zhidaovip.com/"\n'
-            'MATRIX_PRIVDATA_DIR = "/data0/www/privdata/normandy-biz.off.zhidaovip.com/"\n',
-            'MATRIX_APPLOGS_DIR = "/data0/www/applogs/normandy-biz.off.zhidaovip.com/"\n',
-            'MATRIX_ACCESSLOGS_DIR = "/data0/www/logs/normandy-biz.off.zhidaovip.com/"\n',
+            'MATRIX_CACHE_DIR = \"/data0/www/cache/normandy-biz.off.zhidaovip.com/\"\n'
+            'MATRIX_PRIVDATA_DIR = \"/data0/www/privdata/normandy-biz.off.zhidaovip.com/\"\n',
+            'MATRIX_APPLOGS_DIR = \"/data0/www/applogs/normandy-biz.off.zhidaovip.com/\"\n',
+            'MATRIX_ACCESSLOGS_DIR = \"/data0/www/logs/normandy-biz.off.zhidaovip.com/\"\n',
             '#[mysql]\n',
             'MATRIX_DB1_HOST = 10.8.1.184\n',
             'MATRIX_DB1_HOST_R = 10.8.1.184\n',

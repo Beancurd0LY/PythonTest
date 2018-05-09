@@ -13,8 +13,8 @@ import requests
 import download1
 
 inpath = ("C:\\Users\\admin\\Desktop\\图片\\下载")
-uipath = unicode(inpath,"utf8")
-os.chdir(uipath)#变更当前目录
+uipath = unicode(inpath, "utf8")
+os.chdir(uipath)  # 变更当前目录
 print os.getcwd()
 
 url = '''https://image.baidu.com/search/acjson?tn=resultjson_com&ipn=rj&ct=201326592&is=&fp=result&queryWord+=
@@ -22,47 +22,46 @@ url = '''https://image.baidu.com/search/acjson?tn=resultjson_com&ipn=rj&ct=20132
     &face=0&istype=2&qc=&nc=1&fr=&step_word=%E4%BB%99%E5%89%91&pn=390&rn=30'''
        
 url2 = "http://reeoo.com/"
-#res = urllib2.urlopen(url)
-#content = res.read().decode("utf-8")
-#print content
-#soup = BeautifulSoup(res, 'lxml')
-#print soup.prettify()
-#soup.find_all(thumbURL=re.compile("https://ss0.bdstatic.com"), class_='lazy')
-#soup.find_all(attrs={"class":"thumbURL"})
-#print soup.find_all(attrs={"class":"thumbURL"})
-#print soup.select("thumbURL")
+# res = urllib2.urlopen(url)
+# content = res.read().decode("utf-8")
+# print content
+# soup = BeautifulSoup(res, 'lxml')
+# print soup.prettify()
+# soup.find_all(thumbURL=re.compile("https://ss0.bdstatic.com"), class_='lazy')
+# soup.find_all(attrs={"class":"thumbURL"})
+# print soup.find_all(attrs={"class":"thumbURL"})
+# print soup.select("thumbURL")
 r = requests.get(url)
 r.encoding = "ISO-8859-1"
-#r.text
+# r.text
 print r.text
-#print r.json()
-#fobj = open("a.txt","w")
-#fobj.write(r.text.read())
-#fobj.close()
+# print r.json()
+# fobj = open("a.txt","w")
+# fobj.write(r.text.read())
+# fobj.close()
 a = r.json()
-#a = r.text
+# a = r.text
 print type(a)
 print a[ u'data' ]
 b = a[ u'data' ]
 listUrl = []
 
-for i in range(0,len(b)-1):
+for i in range(0, len(b) - 1):
     listUrl.append((b[i][ u'thumbURL']))
     print b[i][ u'thumbURL']
     
 print listUrl
 
-
 for i in range(len(listUrl)):
     url = listUrl[i]
     inpath = ("C:\\Users\\admin\\Desktop\\图片\\下载")
-    uipath = unicode(inpath,"utf8")
-    os.chdir(uipath)#变更当前目录
+    uipath = unicode(inpath, "utf8")
+    os.chdir(uipath)  # 变更当前目录
     req = requests.get(url)
     if req.status_code != 200:
         print ("error")
     filename = url.split("/")[-1]
-    with open(filename,"wb") as fobj:
+    with open(filename, "wb") as fobj:
         fobj.write(req.content)
         print fobj.tell()
     print ("sucess")

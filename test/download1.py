@@ -6,28 +6,29 @@
 import requests
 import os
 
+
 class download1(object):
     '''
     下载
     '''
-    def __init__(self,url):
+
+    def __init__(self, url):
         self.url = url
         
-    def download(self,url):
+    def download(self, url):
         '''下载'''
         inpath = ("C:\\Users\\admin\\Desktop\\图片\\下载")
-        uipath = unicode(inpath,"utf8")
-        os.chdir(uipath)#变更当前目录
+        uipath = unicode(inpath, "utf8")
+        os.chdir(uipath)  # 变更当前目录
         req = requests.get(url)
         if req.status_code != 200:
             print ("error")
             return
         filename = url.split("/")[-1]
-        with open(filename,"wb") as fobj:
+        with open(filename, "wb") as fobj:
             fobj.write(req.content)
             print fobj.tell()
         print ("sucess")
-     
 
      
 if __name__ == '__main__':

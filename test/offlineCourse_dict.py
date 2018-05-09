@@ -49,5 +49,3 @@ update_courseOffline = {
     'info':''
 }
 
-
-

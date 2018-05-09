@@ -1,19 +1,15 @@
-#/usr/bin/python
-#encoding:utf-8
+# /usr/bin/python
+# encoding:utf-8
 import urllib
 import os
 import requests
 num = input("请输入图片数量：")
 print num
-a = num/60
+a = num / 60
 print a
-
-
 
 word = urllib.quote("商圈权限_申请出售短信委托")
 print word
-
-
 
 post_url = "http://open.test.zhidaovip.com/login/facade/server/v1/authentication/moblieWithPassword"
 data_dict = {}
@@ -33,12 +29,11 @@ head_dict['Content-Type'] = "application/x-www-form-urlencoded"
 
 try:
     print post_url
-    tmp_res = requests.post(post_url,data=data_dict,headers = head_dict)
+    tmp_res = requests.post(post_url, data=data_dict, headers=head_dict)
     print tmp_res.status_code
     print tmp_res.json()
     print tmp_res.json()['tokenInfo']['token']
 except:
     print ("[*****error******] '%s' requests error" % post_url)
-    
 
     

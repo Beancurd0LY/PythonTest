@@ -1,5 +1,5 @@
-#/usr/bin/python
-#encoding:utf-8
+# /usr/bin/python
+# encoding:utf-8
 
 
 class MATRIX_ENV_CONF(object):
@@ -33,7 +33,7 @@ class MATRIX_ENV_CONF(object):
             '#MATRIX_REDIS2_HOST = "10.8.1.11:7011"\n',
             '#MATRIX_REDIS3_HOST = "10.8.1.11:7012"\n']
         
-        with open("MATRIX_ENV_CONF.ini","w") as f:
+        with open("MATRIX_ENV_CONF.ini", "w") as f:
             for i in range(len(config)):
                 f.write(config[i])
 
